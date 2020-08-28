@@ -22,19 +22,21 @@
         <div id="lower-form-container">
 
             <div id="url-container">
-                <mat-form-field appearance="fill" id="url">
+                <mat-form-field appearance="fill" id="url-field">
                     <mat-label>Video URL</mat-label>
                     <input matNativeControl matInput>
                 </mat-form-field>
             </div>
 
             <div id="preset-container">
+                
+                <app-preset-selector></app-preset-selector>
 
             </div>
 
             <div id="preset-settings-container">
 
-                <app-preset-selector></app-preset-selector>
+                <button mat-icon-button><mat-icon id="preset-settings-ico">settings</mat-icon></button>
 
             </div>
 

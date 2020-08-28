@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Material Imports
 // import { MatSliderModule } from '@angular/material/slider';#
+import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -45,30 +46,31 @@ import { PresetSelectorComponent } from './main-bar/preset-selector/preset-selec
     MaximizeWindowCtrlComponent,
 
     // Queue Components
-    QueueComponent,
     ItemComponent,
+    QueueComponent,
 
     // Footer Components
-    PlaylistComponent,
     MainBarComponent,
+    PlaylistComponent,
     PresetSelectorComponent,
 
   ],
 
   imports: [
 
-    NgxElectronModule,
     BrowserModule,
+    NgxElectronModule,
     BrowserAnimationsModule,
 
+    MatCardModule,
     MatMenuModule,
     MatIconModule,
-    MatButtonModule,
-    MatProgressSpinnerModule,
-    MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
     MatExpansionModule,
-    MatSelectModule
+    MatFormFieldModule,
+    MatProgressSpinnerModule,
 
   ],
 

@@ -46,15 +46,34 @@
 }
 
 #url-container {
-    flex: 6 1 auto;
+    flex: 8 1 auto;
+    margin-left: 8px;;
 }
 
 #preset-container {
     flex: 3 1 auto;
+    width: $preset-selector-width;
+    margin-left: 8px;
 }
 
+app-preset-selector {
+    float: right;
+    width: 100%;
+}
+
+
 #preset-settings-container {
-    flex: 1 1 auto
+
+    $side-margin: -4px;
+
+    margin: auto $side-margin auto $side-margin;
+
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.34375em;
+
 }
 
 .q-btn{
@@ -64,6 +83,11 @@
     width: calc(100% - 2*#{$margin});
     height: calc(100% - 2*#{$margin});
     margin: $margin;
+}
+
+#url-field {
+    display: block;
+    width: 100%;
 }
 
 // #add-q-btn {
@@ -78,6 +102,11 @@
 
 #addq-ico {
     transform: scale($addq-ico-size);
+    color: $primary-light;
+}
+
+#preset-settings-ico {
+    transform: scale($preset-settings-ico-size);
     color: $primary-light;
 }
 
