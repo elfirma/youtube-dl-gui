@@ -1,0 +1,56 @@
+@import "../variables.scss";
+
+* {
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    vertical-align: baseline;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0;
+    background: $primary;
+    color: white;
+}
+
+h1 {
+    margin: 0 0 10px 0; 
+    font-weight: 600; 
+    line-height: 1.2;
+}
+
+p {
+    margin-top: 10px; 
+    color: rgba(255,255,255,0.4);
+}
+
+// --- MAIN-BAR ---
+
+app-main-bar {
+    background: $primary-dark;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: $app-footer-heigth;
+    bottom: 0%;
+}
+
+// --- APP-QUEUE ---
+
+#app-queue {
+    position: absolute;
+    top: $app-header-heigth;
+    bottom: $app-footer-heigth;
+    overflow: hidden;
+}

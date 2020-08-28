@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+#app-header{
+    display: block;
+    position: fixed;
+    background-color: $primary-dark;
+    width: 100%;
+    height: $app-header-heigth;
+    z-index: 0;
+}
+
+#app-header #dragable-region {
+    width: 100%;
+    height: 100%;
+    -webkit-app-region: drag;
+    z-index: -1;
+}
+
+#window-controls {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    right: 0%;
+    z-index: 10;
+    
+}

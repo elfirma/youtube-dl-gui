@@ -1,0 +1,58 @@
+<div id="main-bar">
+
+    <div id="form-container">
+
+        <div id="upper-form-container">
+
+            <div id="preview-container">
+                <div id="playlist-layer" class="layer">
+                    <app-playlist></app-playlist>
+                </div>
+                <div id="preview-layer" class="layer">
+
+                </div>
+            </div>
+
+            <div id="path-container">
+
+            </div>
+
+        </div>
+
+        <div id="lower-form-container">
+
+            <div id="url-container">
+                <mat-form-field appearance="fill" id="url">
+                    <mat-label>Video URL</mat-label>
+                    <input matNativeControl matInput>
+                </mat-form-field>
+            </div>
+
+            <div id="preset-container">
+
+            </div>
+
+            <div id="preset-settings-container">
+
+                <app-preset-selector></app-preset-selector>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="add-q-container">
+        <button mat-stroked-button class="q-btn" id="add-q-btn">
+            <mat-icon class="icon" id="addq-ico">playlist_add</mat-icon>
+        </button>
+    </div>
+
+    <div id="download-q-container">
+        <button mat-raised-button class="q-btn" id="download-q-btn">
+            <mat-icon class="icon" id="dl-ico">get_app</mat-icon>
+        </button>
+        <!-- <mat-spinner></mat-spinner> -->
+    </div>
+
+</div>
