@@ -31,6 +31,7 @@ import { CloseWindowCtrlComponent } from './header/windowCtrl/close-winCtrl.comp
 import { MinimizeWindowCtrlComponent } from './header/windowCtrl/min-winCtrl.component';
 import { MaximizeWindowCtrlComponent } from './header/windowCtrl/max-winCtrl.component';
 import { PresetSelectorComponent } from './main-bar/preset-selector/preset-selector.component';
+import { DependenciesService } from './dependencies.service';
 
 @NgModule({
 
@@ -76,7 +77,8 @@ import { PresetSelectorComponent } from './main-bar/preset-selector/preset-selec
 
   providers: [
     QueueService,
-    ElectronService
+    ElectronService,
+    DependenciesService,
   ],
 
   bootstrap: [

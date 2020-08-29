@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DependenciesService } from './dependencies.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'youtube-dl-gui';
+
+  constructor(private dep: DependenciesService) {}
+
 }
