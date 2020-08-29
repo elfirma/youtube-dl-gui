@@ -15,11 +15,8 @@ export class DependenciesService {
 
     console.log("Dependencies service started...");
 
-    const fs = electron.remote.require('fs');
-    console.log(fs);
-
     // const { spawn } = require("child_process");
-    // console.log(spawn);
+    // console.log("SPAWN:", spawn);
 
   }
 }
