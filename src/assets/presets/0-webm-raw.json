@@ -1,0 +1,13 @@
+{
+    "id"   : 0,
+    "name" : "Video - raw",
+    "type" : "video",
+
+    "args" : [
+        "-x",
+        "--audio-format mp3",
+        "--audio-quality 9",
+        "--prefer-ffmpeg",
+        "--metadata-from-title \"(?P<artist>.+?) - (?P<title>.+)\""
+    ]
+}

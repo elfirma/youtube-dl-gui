@@ -1,0 +1,13 @@
+{
+    "id"   : 2,
+    "name" : "m4a - High quality",
+    "type" : "audio",
+
+    "args" : [
+        "-x",
+        "--audio-format m4a",
+        "--audio-quality 0",
+        "--prefer-ffmpeg",
+        "--metadata-from-title \"(?P<artist>.+?) - (?P<title>.+)\""
+    ]
+}

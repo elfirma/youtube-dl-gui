@@ -1,6 +1,13 @@
 <mat-form-field appearance="fill" id="preset-selector-field">
     <mat-label>Select</mat-label>
     <mat-select>
-      <mat-option value="option"></mat-option>
+      <!-- PRESET ENTRY TEMPLATE -->
+      <mat-option *ngFor="let preset of presets" value="{{preset.id}}" label="{{preset.name}}">
+        {{preset.name}}
+        <!-- <mat-icon class="type-ico" matSuffix>
+          {{preset.type == "audio" ? "music_note" : "video_label"}}
+        </mat-icon> -->
+      </mat-option>
+      <!-- END OF TEMPLATE -->
     </mat-select>
   </mat-form-field>
