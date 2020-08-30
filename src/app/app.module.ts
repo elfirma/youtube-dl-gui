@@ -1,6 +1,7 @@
 // Core Imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -66,6 +67,7 @@ import { UrlBarComponent } from './main-bar/url-bar/url-bar.component';
     BrowserModule,
     NgxElectronModule,
     BrowserAnimationsModule,
+    FormsModule, 
 
     MatCardModule,
     MatMenuModule,
