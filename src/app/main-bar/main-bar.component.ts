@@ -7,13 +7,8 @@ import { PreviewService } from './preview.service';
   styleUrls: ['./main-bar.component.scss']
 })
 export class MainBarComponent implements OnInit {
-  
+
   constructor(private preview : PreviewService) {}
-
-  @HostListener('change') onClick(){
-    
-  }
-
 
   ngOnInit(): void {
   }

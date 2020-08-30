@@ -34,6 +34,7 @@ import { PresetSelectorComponent } from './main-bar/preset-selector/preset-selec
 import { DependenciesService } from './dependencies.service';
 import { PresetService } from './main-bar/preset-selector/preset.service';
 import { PreviewService } from './main-bar/preview.service';
+import { UrlBarComponent } from './main-bar/url-bar/url-bar.component';
 
 @NgModule({
 
@@ -56,6 +57,7 @@ import { PreviewService } from './main-bar/preview.service';
     MainBarComponent,
     PlaylistComponent,
     PresetSelectorComponent,
+    UrlBarComponent,
 
   ],
 
