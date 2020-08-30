@@ -1,11 +1,11 @@
 {
-    "id"   : 2,
-    "name" : "M4A - High quality",
+    "id"   : 3,
+    "name" : "FLAC - Lossless",
     "type" : "audio",
 
     "args" : [
         "-x",
-        "--audio-format m4a",
+        "--audio-format flac",
         "--audio-quality 0",
         "--prefer-ffmpeg",
         "--metadata-from-title \"(?P<artist>.+?) - (?P<title>.+)\""
