@@ -20,12 +20,20 @@ export class PreviewService {
         // Fetch Metadata
         const data = spawn("./src/api/youtube-dl.exe", [url, "-J"]);
 
-        data.on('data', (buffer: any) => {
+        data.stdout.on('data', (buffer: any) => {
           const json = JSON.parse(buffer);
+          console.log(json);
+
+          resolve(json);
+
         })
+
+        data.stderr.on('err', (err: any) => reject(err))
 
       });
     }
+
+    fetchMetadata(url);
 
   }
 

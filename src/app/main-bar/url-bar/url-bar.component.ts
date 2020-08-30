@@ -8,12 +8,13 @@ import { PreviewService } from '../preview.service';
 })
 export class UrlBarComponent implements OnInit {
 
-  constructor(preview: PreviewService) {}
+  constructor(private preview: PreviewService) {}
 
   public urlModel: string;
 
-  onChange(){
-    console.log(this.urlModel);
+  onChange(): void {
+    console.log("Fetching Metadata for: ", this.urlModel);
+    this.preview.setURL(this.urlModel);
   }
 
   ngOnInit(): void {
