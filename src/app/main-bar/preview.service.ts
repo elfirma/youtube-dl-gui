@@ -18,9 +18,11 @@ export class PreviewService {
       return new Promise((resolve, reject) => {
         
         // Fetch Metadata
-        const thumbnails = spawn("./src/api/youtube-dl.exe", [url, "-J"]);
+        const data = spawn("./src/api/youtube-dl.exe", [url, "-J"]);
 
-        thumbnails.on('data')
+        data.on('data', (buffer: any) => {
+          const json = JSON.parse(buffer);
+        })
 
       });
     }
