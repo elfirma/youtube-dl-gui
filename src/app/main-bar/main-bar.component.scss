@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: row;
 
-    height: calc(#{$app-footer-heigth}/ 2);
+    height: calc(#{$app-footer-height}/ 2);
 }
 
 #preview-container {
@@ -42,7 +42,7 @@
     display: flex;
     flex-direction: row;
 
-    height: calc(#{$app-footer-heigth}/ 2);
+    height: calc(#{$app-footer-height}/ 2);
 }
 
 #url-container {

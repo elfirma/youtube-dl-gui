@@ -42,7 +42,7 @@ app-main-bar {
     display: block;
     position: fixed;
     width: 100%;
-    height: $app-footer-heigth;
+    height: $app-footer-height;
     bottom: 0%;
 }
 
@@ -50,7 +50,7 @@ app-main-bar {
 
 #app-queue {
     position: absolute;
-    top: $app-header-heigth;
-    bottom: $app-footer-heigth;
+    top: $app-header-height;
+    bottom: $app-footer-height;
     overflow: hidden;
 }
