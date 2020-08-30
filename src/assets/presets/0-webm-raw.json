@@ -4,10 +4,8 @@
     "type" : "video",
 
     "args" : [
-        "-x",
-        "--audio-format mp3",
-        "--audio-quality 9",
-        "--prefer-ffmpeg",
+        "--config-location ./src/api/default.conf",
+        
         "--metadata-from-title \"(?P<artist>.+?) - (?P<title>.+)\""
     ]
 }

@@ -4,10 +4,11 @@
     "type" : "audio",
 
     "args" : [
+        "--config-location ./src/api/default.conf",
+        
         "-x",
         "--audio-format flac",
         "--audio-quality 0",
-        "--prefer-ffmpeg",
         "--metadata-from-title \"(?P<artist>.+?) - (?P<title>.+)\""
     ]
 }
