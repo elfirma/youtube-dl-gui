@@ -33,6 +33,7 @@ import { MaximizeWindowCtrlComponent } from './header/windowCtrl/max-winCtrl.com
 import { PresetSelectorComponent } from './main-bar/preset-selector/preset-selector.component';
 import { DependenciesService } from './dependencies.service';
 import { PresetService } from './main-bar/preset-selector/preset.service';
+import { PreviewService } from './main-bar/preview.service';
 
 @NgModule({
 
@@ -80,7 +81,8 @@ import { PresetService } from './main-bar/preset-selector/preset.service';
     QueueService,
     ElectronService,
     DependenciesService,
-    PresetService
+    PresetService,
+    PreviewService
   ],
 
   bootstrap: [
