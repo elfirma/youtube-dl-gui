@@ -3,7 +3,7 @@ import { ElectronService } from 'ngx-electron';
 
 @Component({
   selector: 'app-winctrl-max',
-  template: `<mat-icon>fullscreen</mat-icon>`,
+  template: `<button mat-icon-button><mat-icon>fullscreen</mat-icon></button>`,
   styleUrls: ['./winCtrls.component.scss']
 })
 export class MaximizeWindowCtrlComponent implements OnInit {
@@ -11,7 +11,7 @@ export class MaximizeWindowCtrlComponent implements OnInit {
   constructor(private electron: ElectronService) { }
 
   @HostListener('click') onClick(): void {
-    console.log('+');
+    this.electron.remote.getCurrentWindow().maximize();
   }
 
   ngOnInit(): void {
