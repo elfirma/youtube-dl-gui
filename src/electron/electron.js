@@ -39,7 +39,7 @@ function createWindow () {
     slashes: true
   }))
 
-
+  mainWindow.setIcon('./src/assets/icon-64.png');
   // window.on('ready-to-show', () => window.show());
 
   // Open the DevTools.
