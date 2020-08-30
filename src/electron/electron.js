@@ -41,7 +41,7 @@ function createWindow () {
   }))
 
   mainWindow.setIcon('./src/assets/icon-64.png');
-  window.on('ready-to-show', () => window.show());
+  mainWindow.on('ready-to-show', () => mainWindow.show());
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
