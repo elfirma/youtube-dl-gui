@@ -1,67 +1,21 @@
 @import "../../variables.scss";
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+$hover-color: rgba(255,255,255,0.1);
+$active-color: rgba(255,255,255,0.2);
+
 #app-header{
     display: block;
     position: fixed;
     background-color: $primary-dark;
     width: 100%;
     height: $app-header-height;
-    z-index: 0;
 }
 
 #app-header #dragable-region {
     width: 100%;
     height: 100%;
     -webkit-app-region: drag;
-}
-
-#window-controls {
-    display: grid;
-    grid-template-columns: repeat(3, 28px);
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    color: #b9bbbe;
-}
-
-#windows-controls .button {
-    grid-row: 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    user-select: none;
-}
-
-#window-controls .button:hover {
-    background-color: rgba(255,255,255,0.1);
-}
-
-#window-controls .button:active {
-    background-color: rgba(255,255,255,0.2);
-}
-
-#btn_min {
-    grid-column: 1;
-  }
-  
-#btn_max {
-    grid-column: 2;
-}
-  
-#btn_close {
-    grid-column: 3;
-}
-
-#btn_close:hover {
-    background-color: #E81123;
-}
-
-#btn_close:active {
-    background-color: #F1707A;
 }
 
 #window-title {
@@ -73,11 +27,74 @@
     font-family: "Press Start 2P", cursive;
     font-size: 12px;
     color: white;
-  }
+}
   
-  #window-title span {
+#window-title span {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     line-height: 1.5;
-  }
+}
+
+#window-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 46px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+#window-controls {
+    -webkit-app-region: no-drag;
+}
+
+#window-controls .button {
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+#btn_close {
+    grid-column: 3;
+}
+
+#btn_close:hover {
+    background: #E81123;
+}
+
+#btn_close:active {
+    background: #F1707A;
+}
+
+#btn_min {
+    grid-column: 1;
+}
+
+#btn_min:hover {
+    background: $hover-color;
+}
+
+#btn_min:active {
+    background: $active-color;
+}
+
+#btn_max {
+    grid-column: 2;
+}
+
+#btn_max:hover {
+    background: $hover-color;
+}
+
+#btn_max:active {
+    background: $active-color;
+}
+
+img {
+    float: center;
+}
