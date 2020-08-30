@@ -23,7 +23,7 @@ function createWindow () {
 
     frame         : false,
     titleBarStyle : "hidden",
-    // show      : false,
+    show      : false,
     
     webPreferences: {
       nodeIntegration: true,
@@ -41,7 +41,7 @@ function createWindow () {
   }))
 
   mainWindow.setIcon('./src/assets/icon-64.png');
-  // window.on('ready-to-show', () => window.show());
+  window.on('ready-to-show', () => window.show());
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
