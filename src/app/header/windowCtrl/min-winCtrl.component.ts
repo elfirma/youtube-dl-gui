@@ -3,7 +3,7 @@ import { ElectronService } from 'ngx-electron';
 
 @Component({
   selector: 'app-winctrl-min',
-  template: `<div class="button" id="btn_min"><img class="icon" srcset="./assets/wndCtrls/min.png" draggable="false"></div>`,
+  template: `<div class="button" id="btn_min"><svg aria-hidden="false" width="12" height="12" viewBox="0 0 12 12" draggable="false"><rect fill="currentColor" width="10" height="1" x="1" y="6"></rect></svg></div>`,
   styleUrls: ['../header.component.scss']
 })
 export class MinimizeWindowCtrlComponent implements OnInit {
@@ -18,3 +18,4 @@ export class MinimizeWindowCtrlComponent implements OnInit {
   }
 
 }
+// <img class="icon" srcset="./assets/wndCtrls/min.png" draggable="false">

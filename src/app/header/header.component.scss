@@ -38,11 +38,13 @@ $active-color: rgba(255,255,255,0.2);
 
 #window-controls {
     display: grid;
-    grid-template-columns: repeat(3, 46px);
+    grid-template-columns: repeat(3, 28px);
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
+    color: #b9bbbe;
+    cursor: pointer;
 }
 
 #window-controls {
