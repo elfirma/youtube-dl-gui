@@ -45,7 +45,7 @@
     height: calc(#{$app-footer-height}/ 2);
 }
 
-#url-container {
+app-url-bar {
     flex: 8 1 auto;
     margin-left: 8px;;
 }
@@ -83,11 +83,6 @@ app-preset-selector {
     width: calc(100% - 2*#{$margin});
     height: calc(100% - 2*#{$margin});
     margin: $margin;
-}
-
-#url-field {
-    display: block;
-    width: 100%;
 }
 
 // #add-q-btn {

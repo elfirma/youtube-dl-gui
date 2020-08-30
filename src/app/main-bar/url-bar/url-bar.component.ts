@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PreviewService } from '../preview.service';
 
 @Component({
   selector: 'app-url-bar',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UrlBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(preview: PreviewService) {}
+
+  public urlModel: string;
+
+  onChange(){
+    console.log(this.urlModel);
+  }
 
   ngOnInit(): void {
   }
