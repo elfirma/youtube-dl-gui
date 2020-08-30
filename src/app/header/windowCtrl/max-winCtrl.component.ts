@@ -11,7 +11,14 @@ export class MaximizeWindowCtrlComponent implements OnInit {
   constructor(private electron: ElectronService) { }
 
   @HostListener('click') onClick(): void {
-    this.electron.remote.getCurrentWindow().maximize();
+    const currWnd = this.electron.remote.getCurrentWindow();
+
+    if(currWnd.isMaximized()) {
+      currWnd.unmaximize();
+    } else {
+      currWnd.maximize();
+    }
+    
   }
 
   ngOnInit(): void {
