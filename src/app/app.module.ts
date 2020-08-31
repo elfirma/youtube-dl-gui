@@ -23,7 +23,7 @@ import { ElectronService, NgxElectronModule } from 'ngx-electron';
 
 // Component Imports
 import { AppComponent } from './app.component';
-import { ItemComponent } from './item/item.component';
+import { ItemsComponent } from './queue/items/items.component';
 import { QueueComponent } from './queue/queue.component';
 import { HeaderComponent } from './header/header.component';
 import { MainBarComponent } from './main-bar/main-bar.component';
@@ -51,7 +51,7 @@ import { UrlBarComponent } from './main-bar/url-bar/url-bar.component';
     MaximizeWindowCtrlComponent,
 
     // Queue Components
-    ItemComponent,
+    ItemsComponent,
     QueueComponent,
 
     // Footer Components
