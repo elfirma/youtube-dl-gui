@@ -48,7 +48,8 @@ app-main-bar {
 
 // --- APP-QUEUE ---
 
-#app-queue {
+app-queue {
+    width: 100%;
     position: absolute;
     top: $app-header-height;
     bottom: $app-footer-height;
