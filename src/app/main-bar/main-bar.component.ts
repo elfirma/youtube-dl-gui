@@ -37,7 +37,6 @@ export class MainBarComponent implements OnInit {
       slashes: true
     }))
 
-    dialog.showOpenDialog(wnd_pSettings);
   }
 
   ngOnInit(): void {
