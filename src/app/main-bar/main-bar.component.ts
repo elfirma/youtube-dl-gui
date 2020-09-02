@@ -13,12 +13,11 @@ export class MainBarComponent implements OnInit {
   constructor(private preview : PreviewService, private matDialog : MatDialog) {}
 
   onSettingsClick(): void {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.width = "400px";
-    dialogConfig.height = "auto";
-
-    
-    this.matDialog.open(PSetDialogBodyComponent, dialogConfig);
+      const dialogRef = this.matDialog.open(PSetDialogBodyComponent, {
+      width: "1100px",
+      height: "500px",
+      autoFocus: true,
+    });
   }
 
   ngOnInit(): void {

@@ -20,6 +20,11 @@ export class PSetDialogBodyComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.dialogRef.updatePosition({
+      bottom: "203px"
+    })
+
+
   }
 
 }
