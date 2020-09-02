@@ -2,10 +2,6 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { PreviewService } from './preview.service';
 import { ElectronService } from 'ngx-electron';
 
-const path = require('path')
-const url = require('url')
-const { dialog } = require('electron').remote;
-
 @Component({
   selector: 'app-main-bar',
   templateUrl: './main-bar.component.html',
@@ -16,7 +12,12 @@ export class MainBarComponent implements OnInit {
   constructor(private preview : PreviewService, private electron : ElectronService) {}
 
   onSettingsClick(): void {
-    let wnd_pSettings = new this.electron.remote.BrowserWindow({
+
+    const path = this.electron.remote.require('path');
+    const url  = this.electron.remote.require('url');
+    const {dialog} = this.electron.remote.require('electron')
+
+    const wnd_pSettings = new this.electron.remote.BrowserWindow({
       width: 800,
       height: 400,
 
