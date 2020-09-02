@@ -15,7 +15,7 @@ export class MainBarComponent implements OnInit {
 
     const path = this.electron.remote.require('path');
     const url  = this.electron.remote.require('url');
-    const {dialog} = this.electron.remote.require('electron')
+    const { dialog } = this.electron.remote.require('electron')
 
     const wnd_pSettings = new this.electron.remote.BrowserWindow({
       width: 800,
@@ -23,6 +23,7 @@ export class MainBarComponent implements OnInit {
 
       frame: false,
       titleBarStyle: "hidden",
+      alwaysOnTop: true,
       
       webPreferences: {
         nodeIntegration: true,
@@ -32,12 +33,10 @@ export class MainBarComponent implements OnInit {
     });
 
     wnd_pSettings.loadURL(url.format({
-      pathname: path.join("./psettings/window/", 'window.component.html'),
+      pathname: path.join(__dirname, 'window.component.html'),
       protocol: 'file:',
       slashes: true
     }))
-
-    dialog.showOpenDialog(wnd_pSettings);
   }
 
   ngOnInit(): void {
