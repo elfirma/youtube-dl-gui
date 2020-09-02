@@ -1,12 +1,49 @@
+$card-height: 94px;
+
 mat-card {
     margin: 8px;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
+    height: $card-height;
+}
+
+.status-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-card-content {
+    height: 100%;
+    flex: auto;
 }
 
 .thumbnail {
     width: 168px;
-    height: 94px;
+    height: $card-height;
+}
+
+.item-progress {
+    float: right;
+    transform: scale(0.75);
+    position: absolute;
+}
+
+.list-progress {
+    float: rigth;
+    transform: scale(0.8);
+    position: absolute;
+}
+
+.progress-text {
+    position: absolute;
+    display: flex;
+    margin-top: 8px;
+}
+
+.progress-text p {
+    margin: 0 0 0px;
+    color: #c2185b;
 }

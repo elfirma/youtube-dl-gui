@@ -1,19 +1,20 @@
-<mat-card *ngFor="let item of items">
+<mat-card *ngFor="let item of queue.getItems()">
 
     <!-- THUMBNAIL -->
-    <img class="thumbnail" src="{{item.img_src}}">
+    <img class="thumbnail" src="{{queue.getThumbnailURL(item)}}">
 
     <!-- INFO -->
     <mat-card-content>{{item.name}}</mat-card-content>
 
     <!-- PLAYLIST SUB INFO -->
     <mat-card-content>
-        <div *ngIf="">
 
+        <div *ngIf="item.isPlaylist;else videoblock">
+            Playlist
         </div>
-        <div #elseblock>
-
-        </div>
+        <ng-template #videoblock>
+            Video
+        </ng-template>
 
     </mat-card-content>
 
@@ -23,7 +24,12 @@
     </mat-card-content>
 
     <!-- STATUS -->
-    <mat-card-content>
-        
+    <mat-card-content class="status-content">
+        <mat-progress-spinner class="list-progress" mode="determinate" value="{{queue.getListProgress(item)}}"></mat-progress-spinner>
+        <mat-progress-spinner class="item-progress" mode="determinate" value="{{item.progress}}"></mat-progress-spinner>
+        <div class="progress-text">
+            <p>{{item.progress}}%</p>
+            <p *ngIf="item.isPlaylist">{{item.listProgress}}/{{item.listLength}}</p>
+        </div>
     </mat-card-content>
 </mat-card>
