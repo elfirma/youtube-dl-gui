@@ -8,6 +8,7 @@ export interface Format {
     format_id?:          Optional<string>;
     filesize?:           Optional<number>;
     protocol?:           Optional<string>;
+    container?:          Optional<string>;
     vcodec?:             Optional<string>;
     acodec?:             Optional<string>;
     format?:             Optional<string>;
@@ -26,7 +27,7 @@ export interface Thumbnail {
     height?:             number;
     width?:              number;
     url?:                string;
-    id?:                 number;
+    id?:                 string;
 }
 
 // https?://github.com/ytdl-org/youtube-dl#output-template
@@ -82,7 +83,7 @@ export interface Metadata {
     /**
      * @description Nickname or id of the video uploader
      */
-    channel:                Optional<string>;
+    channel?:                Optional<string>;
     /**
      * @description Full name of the channel the video is uploaded on
      */
