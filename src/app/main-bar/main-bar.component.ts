@@ -1,6 +1,7 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { PreviewService } from './preview.service';
-import { ElectronService } from 'ngx-electron';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { PSetDialogBodyComponent } from '../p-set-dialog-body/p-set-dialog-body.component';
 
 @Component({
   selector: 'app-main-bar',
@@ -9,34 +10,15 @@ import { ElectronService } from 'ngx-electron';
 })
 export class MainBarComponent implements OnInit {
 
-  constructor(private preview : PreviewService, private electron : ElectronService) {}
+  constructor(private preview : PreviewService, private matDialog : MatDialog) {}
 
   onSettingsClick(): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.width = "400px";
+    dialogConfig.height = "auto";
 
-    const path = this.electron.remote.require('path');
-    const url  = this.electron.remote.require('url');
-    const { dialog } = this.electron.remote.require('electron')
-
-    const wnd_pSettings = new this.electron.remote.BrowserWindow({
-      width: 800,
-      height: 400,
-
-      frame: false,
-      titleBarStyle: "hidden",
-      alwaysOnTop: true,
-      
-      webPreferences: {
-        nodeIntegration: true,
-        nodeIntegrationInWorker: true,
-        enableRemoteModule: true
-      }
-    });
-
-    wnd_pSettings.loadURL(url.format({
-      pathname: path.join(__dirname, 'window.component.html'),
-      protocol: 'file:',
-      slashes: true
-    }))
+    
+    this.matDialog.open(PSetDialogBodyComponent, dialogConfig);
   }
 
   ngOnInit(): void {

@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
 
 // Import Services
 import { QueueService } from './queue/queue.service';
@@ -36,6 +37,7 @@ import { DependenciesService } from './dependencies.service';
 import { PresetService } from './main-bar/preset-selector/preset.service';
 import { PreviewService } from './main-bar/preview.service';
 import { UrlBarComponent } from './main-bar/url-bar/url-bar.component';
+import { PSetDialogBodyComponent } from './p-set-dialog-body/p-set-dialog-body.component';
 
 @NgModule({
 
@@ -59,6 +61,7 @@ import { UrlBarComponent } from './main-bar/url-bar/url-bar.component';
     PlaylistComponent,
     PresetSelectorComponent,
     UrlBarComponent,
+    PSetDialogBodyComponent,
 
   ],
 
@@ -78,7 +81,8 @@ import { UrlBarComponent } from './main-bar/url-bar/url-bar.component';
     MatExpansionModule,
     MatFormFieldModule,
     MatProgressSpinnerModule,
-
+    MatDialogModule,
+    
   ],
 
   providers: [
@@ -86,12 +90,16 @@ import { UrlBarComponent } from './main-bar/url-bar/url-bar.component';
     ElectronService,
     DependenciesService,
     PresetService,
-    PreviewService
+    PreviewService,
+
   ],
 
   bootstrap: [
     AppComponent
-  ]
+  ],
 
+  entryComponents: [
+    PSetDialogBodyComponent,
+  ]
 })
 export class AppModule { }
