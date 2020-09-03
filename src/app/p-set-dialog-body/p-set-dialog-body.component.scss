@@ -1,4 +1,29 @@
-#app-p-set-dialog-body {
+@import "../../variables.scss";
+
+app-p-set-dialog-body {
+    display: block;
+    position: fixed;
     width: 100%;
-    height: 100%;
+}
+
+#footer {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0%;
+}
+
+#btn_close-container {
+    flex: 1 1 auto;
+}
+
+.btn{
+    $margin:16px;
+
+    margin: $margin;
+}
+
+#btn_close {
+    background: $primary;
 }

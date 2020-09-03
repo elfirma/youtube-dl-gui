@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { PreviewService } from './preview.service';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { PSetDialogBodyComponent } from '../p-set-dialog-body/p-set-dialog-body.component';
 
 @Component({
