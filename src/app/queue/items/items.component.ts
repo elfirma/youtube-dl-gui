@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QueueService } from '../queue.service';
 
 @Component({
   selector: 'app-items',
@@ -7,17 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemsComponent implements OnInit {
 
-  public items = [{
-    name: "Test Video",
-    img_src: "https://i.ytimg.com/vi/6GEI3PpXEAo/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBIrLHtY3tkeD-B_D5qXpHtpCIveA",
-    progress: 69,
-    profile: {
-      name: "FLAC Lossless",
-      type: "audio"
-    }
-  }];
-
-  constructor() {}
+  constructor(public queue: QueueService) {}
 
   ngOnInit(): void {
   }
