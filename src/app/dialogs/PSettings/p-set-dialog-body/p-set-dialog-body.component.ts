@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { PresetService, Preset } from './preset.service'
+import { PresetService, Preset } from '../../../backend/services/preset.service'
 
 @Component({
   selector: 'app-p-set-dialog-body',

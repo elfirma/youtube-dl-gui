@@ -1,45 +1,65 @@
 // Core Imports
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule }                     from '@angular/core';
+import { FormsModule }                  from '@angular/forms';
+import { BrowserModule }                from '@angular/platform-browser';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule }      from '@angular/platform-browser/animations';
 
-// Material Imports
-// import { MatSliderModule } from '@angular/material/slider';#
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatDialogModule } from '@angular/material/dialog';
+//-----------------------------------// SERVICES //-----------------------------------//
 
-// Import Services
-import { QueueService } from './queue/queue.service';
-import { ElectronService, NgxElectronModule } from 'ngx-electron';
+//#region -> External Services            DIR: [[*]]
+  import { ElectronService, NgxElectronModule } from 'ngx-electron';
+//#endregion
 
-// Component Imports
-import { AppComponent } from './app.component';
-import { ItemsComponent } from './queue/items/items.component';
-import { QueueComponent } from './queue/queue.component';
-import { HeaderComponent } from './header/header.component';
-import { MainBarComponent } from './main-bar/main-bar.component';
-import { PlaylistComponent } from './main-bar/playlist/playlist.component';
-import { CloseWindowCtrlComponent } from './header/windowCtrl/close-winCtrl.component';
-import { MinimizeWindowCtrlComponent } from './header/windowCtrl/min-winCtrl.component';
-import { MaximizeWindowCtrlComponent } from './header/windowCtrl/max-winCtrl.component';
-import { PresetSelectorComponent } from './main-bar/preset-selector/preset-selector.component';
-import { DependenciesService } from './dependencies.service';
-import { PresetService } from './main-bar/preset-selector/preset.service';
-import { PreviewService } from './main-bar/preview.service';
-import { UrlBarComponent } from './main-bar/url-bar/url-bar.component';
-import { PSetDialogBodyComponent } from './p-set-dialog-body/p-set-dialog-body.component';
+//#region -> Local Services               DIR: [[./backend/services/*]]
+  import { QueueService }                 from './backend/services/queue.service';
+  import { PresetService }                from './backend/services/preset.service';
+  import { PreviewService }               from './backend/services/preview.service';
+  import { DependenciesService }          from './backend/services/dependencies.service';
+//#endregion
+
+//-----------------------------------// COMPONENTS //-----------------------------------//
+
+//#region -> Material Components          DIR: [[@angular/material/*]]
+import { MatCardModule }                from '@angular/material/card';
+import { MatMenuModule }                from '@angular/material/menu';
+import { MatIconModule }                from '@angular/material/icon';
+import { MatInputModule }               from '@angular/material/input';
+import { MatDialogModule }              from '@angular/material/dialog';
+import { MatSelectModule }              from '@angular/material/select';
+import { MatButtonModule }              from '@angular/material/button';
+import { MatDividerModule }             from '@angular/material/divider';
+import { MatExpansionModule }           from '@angular/material/expansion';
+import { MatFormFieldModule }           from '@angular/material/form-field';
+import { MatProgressBarModule }         from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule }     from '@angular/material/progress-spinner';
+//#endregion
+
+import { AppComponent }                 from './app.component';
+
+//#region -> Header Components            DIR: [[./components/header/*]]
+  import { HeaderComponent }              from './components/header/header.component';
+  import { CloseWindowCtrlComponent }     from './components/header/windowCtrl/close-winCtrl.component';
+  import { MinimizeWindowCtrlComponent }  from './components/header/windowCtrl/min-winCtrl.component';
+  import { MaximizeWindowCtrlComponent }  from './components/header/windowCtrl/max-winCtrl.component';
+//#endregion
+
+//#region -> Body Components              DIR: [[./components/body/*]]
+  import { ItemsComponent }               from './components/body/items/items.component';
+  import { QueueComponent }               from './components/body/queue/queue.component';
+//#endregion
+
+//#region -> Footer Components            DIR: [[./components/footer/*]]
+  import { UrlBarComponent }              from './components/footer/url-bar/url-bar.component';
+  import { MainBarComponent }             from './components/footer/main-bar/main-bar.component';
+  import { PlaylistComponent }            from './components/footer/playlist/playlist.component';
+  import { PresetSelectorComponent }      from './components/footer/preset-selector/preset-selector.component';
+//#endregion
+
+//#region -> Dialog Components            DIR: [[./dialog/*]]
+  import { PSetDialogBodyComponent }      from './dialogs/PSettings/p-set-dialog-body/p-set-dialog-body.component';
+//#endregion
+
 
 @NgModule({
 
@@ -54,7 +74,7 @@ import { PSetDialogBodyComponent } from './p-set-dialog-body/p-set-dialog-body.c
     MinimizeWindowCtrlComponent,
     MaximizeWindowCtrlComponent,
 
-    // Queue Components
+    // Body Components
     ItemsComponent,
     QueueComponent,
 

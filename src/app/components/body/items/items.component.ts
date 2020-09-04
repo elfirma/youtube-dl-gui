@@ -1,5 +1,12 @@
+// Angular Core:
 import { Component, OnInit } from '@angular/core';
-import { QueueService } from '../queue.service';
+
+// External Services:
+
+// Local Services:
+import { QueueService } from '../../../backend/services/queue.service';
+
+// Assets:
 
 @Component({
   selector: 'app-items',
