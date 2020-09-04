@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WindowComponent } from './window.component';
+import { PSetDialogBodyComponent } from './p-set-dialog-body.component';
 
-describe('WindowComponent', () => {
-  let component: WindowComponent;
-  let fixture: ComponentFixture<WindowComponent>;
+describe('PSetDialogBodyComponent', () => {
+  let component: PSetDialogBodyComponent;
+  let fixture: ComponentFixture<PSetDialogBodyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WindowComponent ]
+      declarations: [ PSetDialogBodyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WindowComponent);
+    fixture = TestBed.createComponent(PSetDialogBodyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
