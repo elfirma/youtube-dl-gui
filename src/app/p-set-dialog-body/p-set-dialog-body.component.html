@@ -1,25 +1,27 @@
-<h2 mat-dialog-title>Preset Editor</h2>
+<div class="dialog">
+    <h2 mat-dialog-title>Preset Editor</h2>
 
-<mat-dialog-content>
-    
-</mat-dialog-content>
+    <div mat-dialog-content>
+        
+    </div>
 
-<div id="footer">
-    <mat-form-field appearance="fill" id="preset-selector-field">
-        <mat-label>Preset</mat-label>
-        <mat-select>
-            <mat-option *ngFor="let preset of presets" value="{{preset.id}}" label="{{preset.name}}">
-                {{preset.name}}
-                <!-- <mat-icon class="type-ico" matSuffix>
-                {{preset.type == "audio" ? "music_note" : "video_label"}}
-                </mat-icon> -->
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+    <div id="footer">
+        <mat-form-field appearance="fill" id="preset-selector-field">
+            <mat-label>Preset</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let preset of presets" value="{{preset.id}}" label="{{preset.name}}">
+                    {{preset.name}}
+                    <!-- <mat-icon class="type-ico" matSuffix>
+                    {{preset.type == "audio" ? "music_note" : "video_label"}}
+                    </mat-icon> -->
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
 
-    <mat-dialog-actions>
-        <div id="btn_close-container">
-            <button mat-raised-button class="btn" id="btn_close" (click)="close()">Close</button>
+        <div mat-dialog-actions>
+            <div id="btn_close-container">
+                <button mat-raised-button class="btn" id="btn_close" (click)="close()">Close</button>
+            </div>
         </div>
-    </mat-dialog-actions>
+    </div>
 </div>
