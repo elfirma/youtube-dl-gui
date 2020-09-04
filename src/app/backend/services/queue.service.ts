@@ -1,5 +1,12 @@
+// Angular Core:
 import { Injectable } from '@angular/core';
-import { Metadata, Thumbnail } from '../main-bar/metadata';
+
+// External Services:
+
+// Local Services:
+
+// Assets:
+import { Metadata, Thumbnail } from '../assets/templates/metadata';
 
 interface Item {
 

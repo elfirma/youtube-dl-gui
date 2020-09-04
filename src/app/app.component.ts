@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DependenciesService } from './dependencies.service';
+import { DependenciesService } from './backend/services/dependencies.service';
 
 @Component({
   selector: 'app-root',

@@ -1,5 +1,12 @@
+// Angular Core:
 import { Injectable } from '@angular/core';
+
+// External Services:
 import { ElectronService } from 'ngx-electron';
+
+// Local Services:
+
+// Assets:
 
 export interface Preset {
   id: number;
@@ -22,7 +29,7 @@ export class PresetService {
 
     console.log("loading Profiles...");
 
-    const presetPath = "./src/assets/presets";
+    const presetPath = "./src/assets/json/presets/";
 
     // Reading the director for all available Presets
     const presets = fs.readdirSync(presetPath);
