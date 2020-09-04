@@ -1,7 +1,15 @@
-import { Component, OnInit, HostListener, Inject } from '@angular/core';
-import { PreviewService } from './preview.service';
+// Angular Core:
+import { Component, OnInit } from '@angular/core';
+
+// External Services:
 import { MatDialog } from '@angular/material/dialog';
-import { PSetDialogBodyComponent } from '../p-set-dialog-body/p-set-dialog-body.component';
+
+// Local Services:
+
+// Components
+import { PreviewService } from '../../../backend/services/preview.service';
+import { PSetDialogBodyComponent } from '../../../dialogs/PSettings/p-set-dialog-body/p-set-dialog-body.component';
+
 
 @Component({
   selector: 'app-main-bar',

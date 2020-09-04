@@ -1,6 +1,13 @@
+// Angular Core:
 import { Injectable } from '@angular/core';
-import { Metadata, Thumbnail, Format } from './metadata';
+
+// External Services:
 import { ElectronService } from 'ngx-electron';
+
+// Local Services:
+
+// Assets:
+import { Metadata, Thumbnail, Format } from '../assets/templates/metadata';
 
 @Injectable({
   providedIn: 'root'

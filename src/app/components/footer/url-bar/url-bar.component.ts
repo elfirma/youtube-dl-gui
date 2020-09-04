@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PreviewService } from '../preview.service';
+import { PreviewService } from '../../../backend/services/preview.service';
 
 @Component({
   selector: 'app-url-bar',
