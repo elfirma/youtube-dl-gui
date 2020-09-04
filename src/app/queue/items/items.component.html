@@ -1,35 +1,61 @@
 <mat-card *ngFor="let item of queue.getItems()">
 
-    <!-- THUMBNAIL -->
-    <img class="thumbnail" src="{{queue.getThumbnailURL(item)}}">
+    <div class="card-content">
 
-    <!-- INFO -->
-    <mat-card-content>{{item.name}}</mat-card-content>
-
-    <!-- PLAYLIST SUB INFO -->
-    <mat-card-content>
-
-        <div *ngIf="item.isPlaylist;else videoblock">
-            Playlist
+        <!-- THUMBNAIL -->
+        <div class="thumbnail-container">
+            <img class="thumbnail" src="{{queue.getThumbnailURL(item)}}">
+            <div *ngIf="item.isPlaylist" class="playlist-overlay">
+                <p class="list-length">{{item.metadata.entries[0].n_entries}}</p>
+                <mat-icon>playlist_play</mat-icon>
+            </div>
         </div>
-        <ng-template #videoblock>
-            Video
-        </ng-template>
-
-    </mat-card-content>
-
-    <!-- CONTROLS -->
-    <mat-card-content>
-
-    </mat-card-content>
-
-    <!-- STATUS -->
-    <mat-card-content class="status-content">
-        <mat-progress-spinner class="list-progress" mode="determinate" value="{{queue.getListProgress(item)}}"></mat-progress-spinner>
-        <mat-progress-spinner class="item-progress" mode="determinate" value="{{item.progress}}"></mat-progress-spinner>
-        <div class="progress-text">
-            <p>{{item.progress}}%</p>
-            <p *ngIf="item.isPlaylist">{{item.listProgress}}/{{item.listLength}}</p>
-        </div>
-    </mat-card-content>
+        <!-- INFO -->
+        <mat-card-content class="info-container">
+            <div class="title-container">
+                <h2>{{item.metadata.title}}</h2><br>
+            </div>
+            <div class="action-container">
+                <button mat-icon-button class="action-button"><mat-icon>more_vert</mat-icon></button>
+                <div class="spacer"></div>
+                <!-- <mat-divider [vertical]="true"></mat-divider> -->
+                <button mat-icon-button class="action-button"><mat-icon>play_arrow</mat-icon></button>
+                <button mat-icon-button class="action-button"><mat-icon>pause</mat-icon></button>
+                <button mat-icon-button class="action-button" color="warning"><mat-icon>delete</mat-icon></button>
+                <!-- <mat-divider [vertical]="true"></mat-divider> -->
+                <div class="spacer"></div>
+                <button mat-icon-button class="action-button"><mat-icon>open_in_new</mat-icon></button>
+            </div>   
+        </mat-card-content>
+        
+        <!-- PLAYLIST SUB INFO -->
+        <mat-card-content class="playlist-container">
+            
+            <div *ngIf="item.isPlaylist;else videoblock">
+                <mat-card class="playlist-current-card">
+                    <!-- TEST ONLY -->
+                    <img mat-card-sm-image class="playlist-current-img" src="{{item.metadata.entries[1].thumbnail}}">
+                </mat-card>
+            </div>
+            <ng-template #videoblock>
+                
+            </ng-template>
+            
+        </mat-card-content>
+        
+        <!-- STATUS -->
+        <mat-card-content class="status-container">
+            <mat-progress-spinner class="item-progress" mode="determinate" value="{{item.progress}}"></mat-progress-spinner>
+            <div class="progress-text">
+                <p>{{item.progress}}%</p>
+            </div>
+        </mat-card-content>
+        
+        <mat-card-content class="playlist-progress-container">
+            <p *ngIf="item.isPlaylist">{{item.listProgress}}<br>—<br>{{item.listLength}}</p>
+        </mat-card-content>
+    </div>
+    <div class="fetchbar-container">
+        <mat-progress-bar mode="buffer"></mat-progress-bar>
+    </div>
 </mat-card>

@@ -1,23 +1,98 @@
 $card-height: 94px;
+$status-width: 100px;
+$list-progress-width: 50px;
+$info-width: 400px;
+
+h2 {
+    margin: 8px 0px 16px 16px;
+}
+
+.title-container {
+    flex:auto;
+    height: 50%;
+}
+
+.action-container {
+    flex:auto;
+    height: 50%;
+    display: flex;
+}
 
 mat-card {
     margin: 8px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 0px;
     height: $card-height;
 }
 
-.status-content {
+.status-container {
+    position: absolute;
+    right: $list-progress-width;
+    width: $status-width;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 
 mat-card-content {
     height: 100%;
     flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin: auto;
+}
+
+.card-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+.action-button {
+    transform: scale(.75);
+}
+
+.spacer {
+    width: 4px;
+    height: 100%;
+}
+
+mat-progress-bar {
+    position: absolute;
+    bottom: -2px;
+    left: 0px;
+}
+
+.list-length {
+    margin: 0 0 0px 0;
+}
+
+.playlist-overlay {
+    width: 74px;
+    height: 100%;
+    margin-left: -74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(#000000, 0.8);
+}
+
+.thumbnail-container {
+    width: 74px;
+    display: contents;
+
 }
 
 .thumbnail {
@@ -40,10 +115,39 @@ mat-card-content {
 .progress-text {
     position: absolute;
     display: flex;
-    margin-top: 8px;
+    margin: auto;
 }
 
 .progress-text p {
     margin: 0 0 0px;
     color: #c2185b;
+}
+
+.playlist-progress-container {
+    width: $list-progress-width;
+    flex: auto;
+    margin: auto;
+    position: absolute;
+    right: 0%;
+}
+
+.info-container {
+    position: absolute;
+    left: 168px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: $info-width;
+}
+
+.playlist-current-img {
+    width: 84px;
+    height: 47px;
+}
+
+.playlist-current-card {
+    background-color: gray;
+    height: 47px;
 }
