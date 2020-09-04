@@ -328,6 +328,12 @@ export interface Metadata {
      * @description Year (YYYY) when the album was released
      */   
 
+    // Playlist Properties
+
+    _type?:                 Optional<string>;
+    entries?:               Optional<Metadata[]>;
+    n_entries?:             Optional<number>;
+
     //-----------not-commented:-----------
     requested_subtitles?:   any;
     stretched_ratio?:       any;
