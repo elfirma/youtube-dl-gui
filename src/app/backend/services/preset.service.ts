@@ -2,17 +2,13 @@
 import { Injectable } from '@angular/core';
 
 // External Services:
-import { ElectronService } from 'ngx-electron';
+import { Preset } from '../assets/templates/preset';
+import { BackendService } from '../backend.service';
 
 // Local Services:
 
 // Assets:
 
-export interface Preset {
-  id: number;
-  name: string;
-  args: string[];
-}
 
 @Injectable({
   providedIn: 'root'
@@ -22,10 +18,15 @@ export class PresetService {
   public presetNames = [];
   public presets = [];
 
-  constructor(private electron: ElectronService) {
+  constructor(private $master: BackendService) {
 
-    const fs = electron.remote.require('fs');
-    const path = electron.remote.require('path');
+    
+
+  }
+
+  loadPresets(){
+
+    const {fs, path} = this.$master.node;
 
     console.log("loading Profiles...");
 
@@ -49,6 +50,12 @@ export class PresetService {
 
     console.log("Loaded Presets:", {...this.presetNames});
 
+    return this.presets;
+  }
+
+
+  public savePresets() : void {
+    
   }
 
   getPresets(): Preset[] {
