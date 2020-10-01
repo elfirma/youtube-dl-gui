@@ -10,6 +10,6 @@ import { InitService } from './backend/init.service';
 export class AppComponent {
   title = 'youtube-dl-gui';
 
-  constructor(private init: InitService) {}
+  constructor(private $init: InitService) {}
 
 }

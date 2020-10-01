@@ -14,7 +14,7 @@ export class PSetDialogBodyComponent implements OnInit {
   public presets: Preset[];
 
   constructor(public dialogRef: MatDialogRef<PSetDialogBodyComponent>, private $provider: ProviderService) { 
-    this.presets = $provider.presets;
+    this.presets = this.$provider.presets;
   }
 
   close(): void {

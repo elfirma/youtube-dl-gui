@@ -13,7 +13,7 @@ export class PresetSelectorComponent implements OnInit {
 
   constructor(private $provider : ProviderService) {
 
-    this.presets = $provider.presets;
+    this.presets = this.$provider.presets;
 
   }
 
