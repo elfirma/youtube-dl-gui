@@ -1,9 +1,10 @@
 export enum State {
 
-    IDLE        = 0,
-    QUEUED      = 1,
-    WORKING     = 2,
-    FINISHED    = 3,
+    INIT        = 0, 
+    IDLE        = 1,
+    QUEUED      = 2,
+    WORKING     = 3,
+    FINISHED    = 4,
 
     // ERROR CODES
 

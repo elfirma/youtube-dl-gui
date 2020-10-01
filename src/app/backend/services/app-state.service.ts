@@ -10,6 +10,8 @@ export class AppStateService {
     private $master : BackendService
   ) { }
 
-  
+  public update(){
+
+  }
 
 }

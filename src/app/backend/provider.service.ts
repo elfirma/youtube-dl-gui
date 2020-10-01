@@ -7,6 +7,7 @@ import { PresetService } from './services/preset.service';
 import { QueueService } from './services/queue.service';
 
 import { Preset } from './assets/templates/preset';
+import { State } from './assets/constant/appState.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -44,15 +45,31 @@ export class ProviderService {
       // Push Preset in Array
       this.$preset.presets.push(newPreset);
 
-      if (save) this.$preset.savePresets();
+      if (save) this.$preset.syncPresets();
 
       return id;
 
     }
 
     public savePresets() : void {
-      return this.$preset.savePresets();
+      return this.$preset.syncPresets();
     }
+  //#endregion
+
+  //#region ---------- APP STATE ----------
+
+    private _appState : State = State.INIT;
+
+    public get appState() : State {
+      return this._appState;
+    }
+
+    public set appState(v: State){
+      this._appState = v;
+      this.$appState.update();
+    }
+
+
   //#endregion
 
 
