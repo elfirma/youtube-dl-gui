@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PresetService, Preset } from '../../../backend/services/preset.service';
+import { ProviderService } from '../../../backend/provider.service';
+import { Preset } from '../../../backend/assets/templates/preset';
 
 @Component({
   selector: 'app-preset-selector',
@@ -10,9 +11,9 @@ export class PresetSelectorComponent implements OnInit {
 
   public presets: Preset[];
 
-  constructor(private presetsService: PresetService) {
+  constructor(private $provider : ProviderService) {
 
-    this.presets = presetsService.getPresets();
+    this.presets = $provider.presets;
 
   }
 

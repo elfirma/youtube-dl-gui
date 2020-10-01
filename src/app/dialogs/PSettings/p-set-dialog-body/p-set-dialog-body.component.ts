@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { PresetService, Preset } from '../../../backend/services/preset.service'
+import { PresetService } from '../../../backend/services/preset.service'
+import { Preset } from '../../../backend/assets/templates/preset';
+import { ProviderService } from '../../../backend/provider.service';
 
 @Component({
   selector: 'app-p-set-dialog-body',
@@ -11,8 +13,8 @@ export class PSetDialogBodyComponent implements OnInit {
 
   public presets: Preset[];
 
-  constructor(public dialogRef: MatDialogRef<PSetDialogBodyComponent>, private presetsService: PresetService) { 
-    this.presets = presetsService.getPresets();
+  constructor(public dialogRef: MatDialogRef<PSetDialogBodyComponent>, private $provider: ProviderService) { 
+    this.presets = $provider.presets;
   }
 
   close(): void {
