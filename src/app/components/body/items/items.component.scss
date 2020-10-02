@@ -1,3 +1,6 @@
+
+@import "../../../../sass/variables.scss";
+
 $card-height: 94px;
 $status-width: 100px;
 $list-progress-width: 50px;
@@ -19,6 +22,7 @@ h2 {
 }
 
 mat-card {
+    background-color: $primary-dark;
     margin: 8px;
     display: flex;
     flex-direction: row;
@@ -74,6 +78,15 @@ mat-progress-bar {
     left: 0px;
 }
 
+.mat-progress-bar-background, .mat-progress-bar-buffer {
+    fill: $accent;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: $accent;
+}
+
+
 .list-length {
     margin: 0 0 0px 0;
 }
@@ -120,7 +133,7 @@ mat-progress-bar {
 
 .progress-text p {
     margin: 0 0 0px;
-    color: #c2185b;
+    color: $accent;
 }
 
 .playlist-progress-container {
