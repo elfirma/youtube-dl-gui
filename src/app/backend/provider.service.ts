@@ -58,15 +58,12 @@ export class ProviderService {
 
   //#region ---------- APP STATE ----------
 
-    private _appState : State = State.INIT;
-
     public get appState() : State {
-      return this._appState;
+      return this.$appState.appState;
     }
 
-    public set appState(v: State){
-      this._appState = v;
-      this.$appState.update();
+    public set appState(v: State) {
+      this.$appState.appState = v;
     }
 
 

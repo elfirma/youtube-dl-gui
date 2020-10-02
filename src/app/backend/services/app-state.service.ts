@@ -86,6 +86,7 @@ export class AppStateService {
   }
 
 
+  // Changes the overlayicon
   private set overlay(s: State){
     
     const { node, remote } = this.$master;
