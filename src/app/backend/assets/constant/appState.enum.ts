@@ -12,3 +12,20 @@ export enum State {
     OFFLINE     = -2,
     UNRESPONSIVE= -3
 }
+
+// State Description
+export enum StateDesc {
+
+    INIT        = "Initialized", 
+    IDLE        = "Ready",
+    QUEUED      = "Ready, Queue loaded",
+    WORKING     = "Downloading",
+    FINISHED    = "Finished",
+
+    // ERROR CODES
+
+    ERROR       = "Error",
+    OFFLINE     = "Offline",
+    UNRESPONSIVE= "Unresponsive"
+
+}

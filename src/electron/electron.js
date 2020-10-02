@@ -39,8 +39,27 @@ function createWindow () {
     slashes: true
   }))
 
+  mainWindow.setTitle("YoutubeDL-GUI")
   mainWindow.setIcon('./src/assets/img/icon-64.png');
+  mainWindow.setOverlayIcon('./src/assets/img/overlay-ico/error.png','Error');
+
+  // Outsource maybe????????
+  // mainWindow.setThumbarButtons([
+  //   {
+  //     tooltip: 'start',
+  //     // icon: path.join(__dirname, 'button1.png'),
+  //     click () { console.log('button1 clicked') }
+  //   }, {
+  //     tooltip: 'fastadd',
+  //     // icon: path.join(__dirname, 'button2.png'),
+  //     flags: ['enabled', 'dismissonclick'],
+  //     click () { console.log('button2 clicked'); }
+  //   }
+  // ])
+
+
   mainWindow.on('ready-to-show', () => mainWindow.show());
+
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
