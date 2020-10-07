@@ -21,8 +21,9 @@ export class BackendService {
 	public remote = this.$electron.remote;
 
 	public node = {
-		fs 	: this.remote.require('fs'),
-		path: this.remote.require('path')
+		fs 			  : this.remote.require('fs'),
+		path		  : this.remote.require('path'),
+		child_process : this.remote.require('child_process')
 	}
 
 

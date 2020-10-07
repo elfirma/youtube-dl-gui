@@ -54,6 +54,7 @@ export class ProviderService {
     public savePresets() : void {
       return this.$preset.syncPresets();
     }
+
   //#endregion
 
   //#region ---------- APP STATE ----------
@@ -66,17 +67,7 @@ export class ProviderService {
       this.$appState.appState = v;
     }
 
-
   //#endregion
-
-
-
-
-
-
-
-
-
 
 
 }
