@@ -52,8 +52,8 @@ import { AppComponent }                 from './app.component';
 //#region -> Footer Components            DIR: [[./components/footer/*]]
   import { UrlBarComponent }              from './components/footer/url-bar/url-bar.component';
   import { MainBarComponent }             from './components/footer/main-bar/main-bar.component';
-  import { PlaylistComponent }            from './components/footer/playlist/playlist.component';
   import { PresetSelectorComponent }      from './components/footer/preset-selector/preset-selector.component';
+  import { PreviewComponent }             from './components/footer/preview/preview.component';
 //#endregion
 
 //#region -> Dialog Components            DIR: [[./dialog/*]]
@@ -80,10 +80,10 @@ import { AppComponent }                 from './app.component';
 
     // Footer Components
     MainBarComponent,
-    PlaylistComponent,
     PresetSelectorComponent,
     UrlBarComponent,
     PSetDialogBodyComponent,
+    PreviewComponent,
 
   ],
 
