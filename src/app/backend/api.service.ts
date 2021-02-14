@@ -3,7 +3,6 @@ import { CLIDT } from './assets/constant/clidt.enum';
 import { BackendService } from './backend.service';
 import { CLIData } from './class/clidata';
 import { PATHS } from './lib/paths.lib';
-import { async } from '@angular/core/testing';
 
 type ResultObject = {
   [key in CLIDT]: RegExpMatchArray;
@@ -51,7 +50,7 @@ export class ApiService {
 
       for (const key in results) if(results[key] != []) {
         
-        CLID = new CLIData(this.parseToEnum(key), results[key])
+        CLID = new CLIData(this.parseToEnum<CLIDT>(key), results[key])
 
         break;
       }

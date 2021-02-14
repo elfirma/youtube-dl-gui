@@ -27,8 +27,9 @@
               "src/assets"
             ],
             "styles": [
-              "./src/sass/material.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/sass/variables.scss",
+              "src/sass/material.scss"
             ],
             "scripts": []
           },
@@ -92,8 +93,9 @@
               "src/assets"
             ],
             "styles": [
-              "./src/sass/material.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/sass/variables.scss",
+              "src/sass/material.scss"
             ],
             "scripts": []
           }

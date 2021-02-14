@@ -7,8 +7,8 @@ import { MatDialog } from '@angular/material/dialog';
 // Local Services:
 
 // Components
-import { PreviewService } from '../../../backend/services/preview.service';
 import { PSetDialogBodyComponent } from '../../../dialogs/PSettings/p-set-dialog-body/p-set-dialog-body.component';
+import { ProviderService } from '../../../backend/provider.service';
 
 
 @Component({
@@ -18,7 +18,7 @@ import { PSetDialogBodyComponent } from '../../../dialogs/PSettings/p-set-dialog
 })
 export class MainBarComponent implements OnInit {
 
-  constructor(private preview : PreviewService, private matDialog : MatDialog) {}
+  constructor(private $provider : ProviderService, private matDialog : MatDialog) {}
 
   onSettingsClick(): void {
       const dialogRef = this.matDialog.open(PSetDialogBodyComponent, {
@@ -26,6 +26,14 @@ export class MainBarComponent implements OnInit {
       height: "500px",
       autoFocus: true,
     });
+  }
+
+  dl_btn(): void {
+
+  }
+
+  add_btn(): void {
+
   }
 
   ngOnInit(): void {

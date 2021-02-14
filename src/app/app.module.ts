@@ -47,19 +47,24 @@ import { AppComponent }                 from './app.component';
 //#region -> Body Components              DIR: [[./components/body/*]]
   import { ItemsComponent }               from './components/body/items/items.component';
   import { QueueComponent }               from './components/body/queue/queue.component';
-//#endregion
-
-//#region -> Footer Components            DIR: [[./components/footer/*]]
+  //#endregion
+  
+  //#region -> Footer Components            DIR: [[./components/footer/*]]
   import { UrlBarComponent }              from './components/footer/url-bar/url-bar.component';
   import { MainBarComponent }             from './components/footer/main-bar/main-bar.component';
   import { PresetSelectorComponent }      from './components/footer/preset-selector/preset-selector.component';
-  import { PreviewComponent }             from './components/footer/preview/preview.component';
+  // import { PreviewComponent }             from './components/footer/preview/preview.component';
+  import { PathComponent }                from './components/footer/path/path.component';
 //#endregion
 
 //#region -> Dialog Components            DIR: [[./dialog/*]]
   import { PSetDialogBodyComponent }      from './dialogs/PSettings/p-set-dialog-body/p-set-dialog-body.component';
 //#endregion
 
+//#region -> Pipe Transforms              DIR: [[./pipes]]
+  import { MaxCharPipe }                  from './pipes/max-char.pipe';
+  import { ShortenPathPipe }              from './pipes/shorten-path.pipe';
+//#endregion
 
 @NgModule({
 
@@ -83,8 +88,10 @@ import { AppComponent }                 from './app.component';
     PresetSelectorComponent,
     UrlBarComponent,
     PSetDialogBodyComponent,
-    PreviewComponent,
-
+    // PreviewComponent,
+    PathComponent,
+    MaxCharPipe,
+    ShortenPathPipe,
   ],
 
   imports: [

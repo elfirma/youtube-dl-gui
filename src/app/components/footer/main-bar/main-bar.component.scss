@@ -110,3 +110,18 @@ app-preset-selector {
 .layer{
     position: absolute;
 }
+
+// PATH 
+
+#path-container {
+    justify-content: center;
+    align-items: center;
+}
+
+app-path {
+    display : flex;
+    align-items: start;
+    justify-content: center;
+    height: 100%;
+    flex-direction: row;
+}

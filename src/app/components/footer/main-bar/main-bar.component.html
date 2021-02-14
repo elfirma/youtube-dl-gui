@@ -14,7 +14,7 @@
             </div>
 
             <div id="path-container">
-
+                <app-path></app-path>
             </div>
 
         </div>
@@ -38,13 +38,13 @@
     </div>
 
     <div id="add-q-container">
-        <button mat-stroked-button class="q-btn" id="add-q-btn">
+        <button mat-stroked-button class="q-btn" id="add-q-btn" (click)="add_btn()">
             <mat-icon class="icon" id="addq-ico">playlist_add</mat-icon>
         </button>
     </div>
 
     <div id="download-q-container">
-        <button mat-raised-button class="q-btn" id="download-q-btn">
+        <button mat-raised-button class="q-btn" id="download-q-btn" (click)="dl_btn()">
             <mat-icon class="icon" id="dl-ico">get_app</mat-icon>
         </button>
         <!-- <mat-spinner></mat-spinner> -->

@@ -9,6 +9,17 @@ import { QueueService } from './services/queue.service';
 import { Preset } from './assets/templates/preset';
 import { State } from './assets/constant/appState.enum';
 
+type Platform = 'aix'
+              | 'android'
+              | 'darwin'
+              | 'freebsd'
+              | 'linux'
+              | 'openbsd'
+              | 'sunos'
+              | 'win32'
+              | 'cygwin'
+              | 'netbsd';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -69,5 +80,41 @@ export class ProviderService {
 
   //#endregion
 
+  //#region ---------- Download Path ----------
 
+    public os : Platform = this.$master.remote.process.platform;
+
+    public path_seperator = this.os == "win32" ? "\\" : "\/";
+
+    public download_path = 
+      this.os == "win32"  ? this.$master.remote.process.env["USERPROFILE"] + "\\Downloads\\" :
+      this.os == "linux"  ? "\~\/Download" :
+      this.os == "darwin" ? "\~\/Download" :
+      /* none of the above: */  ""; 
+
+    public openFolderDialog() : void {
+
+      let window = this.$master.remote.getCurrentWindow();
+
+      this.$master.remote.dialog.showOpenDialog( window, {
+        title : "Select Download Directory",
+        properties : [ 'openDirectory' ]
+      })
+      .then(( v : Electron.OpenDialogReturnValue ) => {
+
+        if (v.canceled) return;
+        if (v.filePaths.length != 1)  return;
+
+        // console.log(v.filePaths)
+
+        this.download_path = v.filePaths[0];
+
+      })
+      .catch( reason => {
+        console.warn(reason)
+      })
+
+    }
+
+  //#endregion
 }

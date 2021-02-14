@@ -1,0 +1,16 @@
+@import '../../../../sass/variables.scss';
+
+a {
+    color: $primary-text;
+    text-decoration: solid;
+}
+
+mat-icon {
+    margin-right: 8px;
+    color: $primary-text;
+    user-select: none;
+}
+
+u {
+    cursor: pointer;
+}
